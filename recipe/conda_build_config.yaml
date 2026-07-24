@@ -1,0 +1,5 @@
+cuda_compiler_version:
+  - 11.8
+  - 12.0
+  - 12.1
+  - 12.2
