@@ -10,7 +10,7 @@ source:
 
 build:
   number: 4
-  skip: True  # [not linux or (not x86_64 and not aarch64) or cuda_compiler_version in (None, "None", "11.8")]
+  skip: True  # [not linux or (not x86_64 and not aarch64)]
 
 requirements:
   build:
@@ -23,9 +23,12 @@ requirements:
     - eigen  # header only library
     - python
     - numpy
+    - cuda-runtime
   run:
     - python
     - cuda-runtime
+
+# CUDA version variants are defined in conda_build_config.yaml
 
 test:
   requires:
